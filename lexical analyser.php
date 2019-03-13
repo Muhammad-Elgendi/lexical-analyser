@@ -6,7 +6,7 @@
  * 2 - "+" and "-" as operators
  * 3 - "int" and "double" as keyword int and keyword double respectively
  * 4- numeric constants of the form [0-9]+
- * 5- identifiers that employ java identifiers naming rules except the letters of the keywords
+ * 5- identifiers that employ java identifiers naming rules
  */
 
 // define accept states
@@ -26,14 +26,14 @@ $fsm = [
     [],    
     ["a-z-0-9"=>2],
     ["0-9"=>3],
-    ["n"=>5],
-    ["t"=>6],
+    ["n"=>5, " "=>2],
+    ["t"=>6," "=>2],
     [],
     ["o"=>8],
-    ["u"=>9],
-    ["b"=>10],
-    ["l"=>11],
-    ["e"=>12],
+    ["u"=>9, " "=>2],
+    ["b"=>10, " "=> 2],
+    ["l"=>11, " "=>2],
+    ["e"=>12, " "=>2],
     [],
     []
 ];
